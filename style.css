@@ -1077,3 +1077,490 @@ button:hover {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/*NAV STYLES*/
+.nav {
+    width: 1100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav .logo {
+    width: 12%;
+}
+
+.nav .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav .menu {
+    width: 43%;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover,
+.nav .active {
+    color: #40e0d0;
+}
+
+/*BANNER*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url(images/background.png);
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-txt {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    text-align: center;
+    color: #000;
+}
+
+.banner-txt h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.banner-txt p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    width: 150px;
+    height: 40px;
+    background-color: #40e0d0;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.banner button:hover {
+    background-color: #7fffd4;
+}
+
+.banner .topspots {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 42%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topspots .col {
+    width: 32%;
+    height: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    border: 2px solid #40e0d0;
+    transition: transform 0.3s;
+}
+
+.topspots .col:hover {
+    transform: scale(1.05);
+}
+
+.topspots .col1 {
+    background-image: url(images/badger.png)
+}
+
+.topspots .col2 {
+    background-image: url(images/zebra.png);
+}
+
+.topspots .col3 {
+    background-image: url(images/buffalo.png);
+}
+
+/*RESPONSIVE STYLES*/
+@media (max-width: 1200px) {
+    .bo-container, .wildmain-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-section, .image-section {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nav {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .luxury-list, .budget-list, .activities-list, 
+    .accommodation-list, .wildlife-list, .team-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .slider-container {
+        height: 400px;
+    }
+    
+    .wildlife-slider {
+        height: 500px;
+    }
+    
+    .culture-card {
+        flex-direction: column;
+    }
+    
+    .culture-card img {
+        max-width: 100%;
+    }
+    
+    .banner-txt {
+        left: 50%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 15px;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .luxury-list, .budget-list, .activities-list, 
+    .accommodation-list, .wildlife-list, .team-list,
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .slider-container {
+        height: 300px;
+    }
+    
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .slide-content p {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .wildlife-slider {
+        height: 400px;
+    }
+    
+    .wildlife-slide-content {
+        padding: 15px;
+        padding-top: 40px;
+    }
+    
+    .wildlife-slide h2 {
+        font-size: 1.8rem;
+    }
+    
+    .wildlife-slide p {
+        font-size: 1rem;
+    }
+    
+    .wildlife-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .mission-vision-container, .eco-focus-container, 
+    .faq-container, .contact-container, .feedback-container {
+        padding: 15px;
+    }
+    
+    .mission-card, .vision-card, .values-card,
+    .eco-focus-card, .faq-card {
+        padding: 15px;
+    }
+    
+    .spots-container {
+        gap: 20px;
+    }
+    
+    .spot-card {
+        flex-direction: column;
+    }
+    
+    .spot-card img {
+        max-width: 100%;
+    }
+    
+    .park-viewer {
+        padding: 0 10px;
+    }
+    
+    .current-park img {
+        max-height: 250px;
+    }
+    
+    /* Form adjustments */
+    .feedback-container, .contactus-form-section {
+        padding: 15px;
+    }
+    
+    input, select, textarea {
+        padding: 0.5rem;
+    }
+    
+    button[type="submit"] {
+        padding: 0.7rem;
+    }
+    
+    .topspots {
+        display: none;
+    }
+    
+    .banner-txt {
+        width: 90%;
+        left: 50%;
+    }
+    
+    .banner-txt h1 {
+        font-size: 2rem;
+    }
+    
+    .banner-txt p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .intro-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .slider-container {
+        height: 250px;
+    }
+    
+    .wildlife-slider {
+        height: 350px;
+    }
+    
+    .wildlife-slide-content {
+        padding: 10px;
+        padding-top: 30px;
+    }
+    
+    .wildlife-slide h2 {
+        font-size: 1.5rem;
+    }
+    
+    .wildlife-slide p {
+        font-size: 0.9rem;
+    }
+    
+    .navigation button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .conservation-note {
+        padding: 15px;
+    }
+    
+    .conservation-note h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Adjust font sizes */
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    /* Button sizes */
+    button, .read-more, a[href^="http"] {
+        min-width: 100px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .popup-content {
+        width: 90%;
+    }
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+    display: none;
+    background: #40e0d0;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.mobile-menu-button:hover {
+    background: #7fffd4;
+}
+
+@media (max-width: 767px) {
+    .mobile-menu-button {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+        width: 100%;
+    }
+    
+    nav.mobile-visible {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        width: 100%;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .nav .logo, 
+    .nav .menu {
+        width: 100%;
+    }
+    
+    .nav .menu {
+        margin-top: 15px;
+    }
+}
+
+.ViewMore {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.ViewMore:hover {
+    background-color: #45a049; 
+}
